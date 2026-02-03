@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My JS Practice</title>
+
+
+  <style>
+    body {
+      background-color: rgb(0, 238, 255);
+      font-family: Arial;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    button {
+      background-color: rgb(0, 247, 255);
+      color: rgb(0, 0, 0);
+      border: none;
+      padding: 8px 15px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    input {
+      padding: 8px;
+      border: 2px solid rgb(0, 208, 255);
+    }
+
+    #output {
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+    }
+
+    #hoverText {
+      color: rgb(99, 31, 31);
+    }
+  </style>
+</head>
+
+<body>
+
+  <button onclick="sayHello()">Say Hello</button>
+  <br><br>
+
+  <input type="text" id="userInput" placeholder="Type something">
+  <button onclick="showInput()">Show Input</button>
+
+  <p id="output"></p>
+
+  <p id="hoverText">Hover over me!</p>
+
+  <script>
+    function sayHello() {
+      alert("Hello, everyone!");
+    }
+
+    function showInput() {
+      let text = document.getElementById("userInput").value;
+      document.getElementById("output").innerText = text;
+    }
+
+    let hoverText = document.getElementById("hoverText");
+
+    hoverText.onmouseover = function () {
+      this.style.color = "darkgreen";
+    };
+
+    hoverText.onmouseout = function () {
+      this.style.color = "green";
+    };
+  </script>
+
+</body>
+</html>
